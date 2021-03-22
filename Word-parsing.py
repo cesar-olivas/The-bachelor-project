@@ -1,19 +1,3 @@
-#We have now found all of the possible words that can follow the condition “the” according to our corpus:
-
-#in order to predict the next word, what we really want to compute is what
-# is the most likely next word out of all of the possible next words.
-
-from collections import defaultdict
-cfd = defaultdict(lambda: defaultdict(lambda: 0))
-for i in range(len(words) - 2):  # loop to the next-to-last word
-    cfd[words[i].lower()][words[i+1].lower()] += 1
-
-# pretty print the defaultdict
-print({k: dict(v) for k, v in dict(cfd).items()})
-
-#So, what’s the most likely word to follow 'the'?
-print("next likely word: ", max(cfd['the']))
-
 
 import nltk
 from nltk.corpus import stopwords
