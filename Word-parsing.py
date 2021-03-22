@@ -1,5 +1,6 @@
-
 import nltk
+from nltk.tokenize import word_tokenize
+from nltk.probability import FreqDist
 from nltk.corpus import stopwords
 stop_words = nltk.corpus.stopwords.words("english")
 #NEWNEWNEWNEWNEWNEWNEWNEWNEWNEWNEWNEWN
@@ -7,8 +8,6 @@ myfile = "/Users/Cesar R. Olivas/Desktop/py projects/Bachelorette.txt"  # Mac us
 rtxt = open(myfile).read()
 bac_string = str(rtxt) #string text
 tokens = nltk.word_tokenize(rtxt)
-
-
 
 print(tokens[:6]) #tokenized text
 fd = FreqDist(tokens)
