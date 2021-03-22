@@ -58,7 +58,6 @@ print({k: dict(v) for k, v in dict(cfd).items()})
 #So, what’s the most likely word to follow 'the'?
 print("next likely word: ", max(cfd['the']))
 
-#https://www.hallada.net/2017/07/11/generating-random-poems-with-python.html
 
 import nltk
 from nltk.corpus import stopwords
