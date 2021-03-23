@@ -23,7 +23,7 @@ word = random.choice(tokens)
 print("random word:", word) #produces a random word from bigram tokens
 
 
-words = tokens[:5000]
+words = tokens[:8000]
 #print(words) #prints words value
 #Iterates through the list of the words with two indices,
 # one of which is offset by one:
@@ -33,7 +33,7 @@ print(bigrams)
 condition = 'love'
 next_words = [bigram[1] for bigram in bigrams
           if bigram[0].lower() == condition]
-#Possible words that can follow the condition “the” according to the data
+#Possible words that can follow the condition “love” according to the data
 print("next word for love:", next_words)
 
 #most likely next word out of all of the possible next words.
@@ -45,7 +45,7 @@ for i in range(len(words) - 2):  # loop to the next-to-last word
 # pretty print the defaultdict
 print({k: dict(v) for k, v in dict(cfd).items()})
 
-#So, what’s the most likely word to follow 'the'?
+#the most likely word to follow 'the'
 print("next likely word: ", max(cfd['the']))
 #this is very interesting
 print("next likely word: ", max(cfd['so']))
