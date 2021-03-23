@@ -17,9 +17,9 @@ filtered_sentence = [] # no stop words sentence
 for w in tokens:
     if w not in stop_words:
         filtered_sentence.append(w)
-print("No stop words", filtered_sentence[:15])
+#print("No stop words", filtered_sentence[:15])
 fdt = FreqDist(filtered_sentence)
-print(fdt.most_common(5)) #5 most common stop-word-free words
+#print(fdt.most_common(5)) #5 most common stop-word-free words
 
 from nltk.stem import PorterStemmer     #GETS RID OF DERIVATIONAL AFFIXES
 
@@ -28,17 +28,17 @@ stemmed_words=[]
 
 for w in filtered_sentence:
     stemmed_words.append(ps.stem(w))
-print(stemmed_words)
+#print(stemmed_words)
 
 import nltk, re
 splits = re.findall(r"\w+(?:[-']\w+)*", str(stemmed_words))
-print("\nREGEXP:", splits) #final clean text
+#print("\nREGEXP:", splits) #final clean text
 clean_fd = FreqDist(splits)
-print( "\nclean words", clean_fd.most_common(15)) #most common of clean text
+#print( "\nclean words", clean_fd.most_common(15)) #most common of clean text
 
 #Not all the way cleaned and tagged correctly but still provides good insight
 tagged_tokens = nltk.pos_tag(splits)
-print(tagged_tokens) #POS TAGGING!!!!
+print("\nPOS tagged tokens", tagged_tokens) #POS TAGGING!!!!
 nouns_and_verbs = [token[0] for token in tagged_tokens if token[1] in ['VBD', 'VBP', 'NN', "NNP", "NNS"]]
 frequency = nltk.FreqDist(nouns_and_verbs)
 print("\nNoun and Verb Freq", frequency.most_common(15)) #PRINTS WORD AND NUMBER OF OCCURANCE BUT NO TAG
