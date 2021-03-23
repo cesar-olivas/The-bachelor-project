@@ -4,14 +4,14 @@ from nltk.probability import FreqDist
 from nltk.corpus import stopwords
 stop_words = nltk.corpus.stopwords.words("english")
 #NEWNEWNEWNEWNEWNEWNEWNEWNEWNEWNEWNEWN
-myfile = "/Users/Cesar R. Olivas/Desktop/py projects/Bachelorette.txt"  # Mac users should leave out C:
+myfile = "/Users/Cesar R. Olivas/Desktop/py projects/Bachelorette.txt"  #leave out C:
 rtxt = open(myfile).read()
 bac_string = str(rtxt) #string text
-tokens = nltk.word_tokenize(rtxt)
+tokens = nltk.word_tokenize(rtxt) #tokenize
 
-print(tokens[:6]) #tokenized text
+#print(tokens[:6]) #tokenized text
 fd = FreqDist(tokens)
-print(fd.most_common(15)) #15 most common tokens
+#print(fd.most_common(15)) #15 most common tokens
 filtered_sentence = [] # no stop words sentence
 
 for w in tokens:
