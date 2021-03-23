@@ -28,7 +28,7 @@ stemmed_words=[]
 
 for w in filtered_sentence:
     stemmed_words.append(ps.stem(w))
-print(stemmed_words)
+print("\nStemmed words: ", stemmed_words)
 
 import nltk, re
 splits = re.findall(r"\w+(?:[-']\w+)*", str(stemmed_words))
