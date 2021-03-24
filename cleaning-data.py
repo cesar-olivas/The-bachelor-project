@@ -19,7 +19,7 @@ for w in tokens:
         filtered_sentence.append(w)
 print("No stop words", filtered_sentence[:15])
 fdt = FreqDist(filtered_sentence)
-print(fdt.most_common(5)) #5 most common stop-word-free words
+#print(fdt.most_common(5)) #5 most common stop-word-free words
 
 from nltk.stem import PorterStemmer     #GETS RID OF DERIVATIONAL AFFIXES
 
