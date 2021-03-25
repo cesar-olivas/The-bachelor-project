@@ -22,7 +22,7 @@ As an introductory step into large data minning this project is in its infancy. 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 Please make sure to update tests as appropriate.
 
-**References and Acknowledgments**\
+**References**\
 https://transcripts.foreverdreaming.org/viewforum.php?f=292 \
 https://www.nltk.org/book/ \
 https://www.analyticsvidhya.com/blog/2020/07/part-of-speechpos-tagging-dependency-parsing-and-constituency-parsing-in-nlp \
