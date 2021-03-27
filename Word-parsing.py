@@ -61,6 +61,8 @@ print("\n LOVE CONCOR", moby.concordance("know"))
 print("\n MAN CONCOR", moby.concordance("honest"))
 print("\n MAN CONCOR", moby.concordance("real"))
 
+cfd = nltk.ConditionalFreqDist((target, fileid[:4])
+
 #NOUN PHRASE CHUNKING
 #sentence = tagged_tokens[:12]
 #grammar = "NP: {<DT>?<JJ>*<NN>}"
